@@ -1,0 +1,4 @@
+# Lets the Authorization header reach PHP on Apache setups that strip it.
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]

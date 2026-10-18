@@ -1,0 +1,19 @@
+server/config/local.php
+
+# Private environment files
+.env
+.env.*
+!.env.example
+
+# React files
+node_modules/
+dist/
+
+# PHP private configuration
+server/config/local.php
+server/config/secrets.php
+
+# Private files
+*.log
+*.key
+*.pem
