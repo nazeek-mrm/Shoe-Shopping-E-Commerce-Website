@@ -345,9 +345,11 @@ VALUES
 INSERT INTO product_images (product_id, image_path, is_primary)
 SELECT id, CONCAT('uploads/sample-', id, '.jpg'), 1 FROM products;
 
--- Admin login -> username: admin   password: admin123
-INSERT INTO admins (username, full_name, password_hash) VALUES
- ('admin','Store Manager','$2y$10$W8sUL.XPAIKuT5e2l4/d6Og3d0OEgnMMSjTk/zu6X8rlMJl4X7SIu');
+-- ========================================
+-- Admin Account Configuration
+-- ========================================
 
--- If the hash above ever fails on your PHP build, open
--- http://localhost/shoe-mart/server/reset-password.php once to regenerate it.
+-- Admin accounts must be created securely
+-- after database installation.
+-- Never store default passwords or
+-- real admin password hashes in this file.
